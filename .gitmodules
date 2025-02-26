@@ -1,0 +1,7 @@
+[submodule "ex1"]
+  path = ex1
+  url = https://github.com/DingZhenPearl/ex1.git
+
+[submodule "html1"]
+  path = html1
+  url = https://github.com/DingZhenPearl/html1.git
