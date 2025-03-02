@@ -5,3 +5,7 @@
 [submodule "html1"]
   path = html1
   url = https://github.com/DingZhenPearl/html1.git
+
+[submodule "vuetest"]
+path = vuetest
+url = https://github.com/DingZhenPearl/vuetest.git
