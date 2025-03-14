@@ -7,5 +7,5 @@
   url = https://github.com/DingZhenPearl/html1.git
 
 [submodule "vuetest"]
-path = vuetest
-url = https://github.com/DingZhenPearl/vuetest.git
+  path = vuetest
+  url = https://github.com/DingZhenPearl/vuetest.git
