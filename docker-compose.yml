@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+  # 前端和Express后端服务
+  web:
+    build:
+      context: ./vuetest
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  # Express API服务
+      - "8080:8080"  # Vue开发服务器
+    volumes:
+      - ./vuetest:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=sushiding
+      - MYSQL_DB=education_platform
+    depends_on:
+      - db
+    command: sh -c "npm run serve & npm run dev"
+
+  # MySQL数据库
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: sushiding
+      MYSQL_DATABASE: education_platform
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    # 添加健康检查以确保数据库准备就绪
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-psushiding"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 添加数据库管理工具(可选)
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+      ADMINER_DESIGN: pepa-linha
+
+volumes:
+  db_data:

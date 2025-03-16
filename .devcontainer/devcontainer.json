@@ -1,0 +1,17 @@
+{
+  "name": "教育平台开发环境",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/app",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "octref.vetur",
+    "ms-python.python",
+    "ms-vscode.cpptools"
+  ],
+  "forwardPorts": [3000, 8080, 3306],
+  "postCreateCommand": "echo '开发容器已创建，正在启动服务...'"
+}
