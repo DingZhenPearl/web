@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "ex1"
+		},
+		{
+			"path": "vuetest"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "on",
+		"git.ignoreLimitWarning": true,
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}
