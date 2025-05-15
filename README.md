@@ -101,3 +101,5 @@ npm run dev    # 后端
 ## 研究团队
 
 如有问题或建议，请通过Issues联系我们。欢迎加入研究或提供改进建议。
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/DingZhenPearl/web)
