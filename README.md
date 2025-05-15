@@ -217,3 +217,5 @@ bash scripts/import-db.sh
 ## 联系方式
 
 如有任何问题或建议，请通过Issues与我们联系。
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/DingZhenPearl/web)
